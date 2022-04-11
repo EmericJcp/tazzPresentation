@@ -1,0 +1,421 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+@font-face {
+  font-family: "StretchPro";
+  src: url("../assets/fonts/StretchPro.otf") format("woff2");
+}
+
+header {
+  width: 100%;
+  height: 20%;
+}
+
+.banner {
+  width: 100%;
+  height: 40%;
+  background-color: #c8fbbf;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+.scrolling {
+  overflow: visible;
+  animation: marquee 15s linear infinite;
+  font-size: 32px;
+  color: #16161d;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-70%);
+  }
+}
+
+.logo {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 20px;
+}
+
+.logo > img {
+  height: 30px;
+  /* VOIR AVEC LES MIN WIDTH POUR QUE CA SOIT AUTO */
+}
+
+.container {
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  padding: 0 20px 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slogan-container {
+  width: 100%;
+}
+
+.slogan-container > h1 {
+  font-family: "StretchPro";
+  font-size: clamp(32px, 10vw, 90px);
+}
+
+.content-container {
+  width: 100%;
+}
+
+.texts-container {
+  width: 100%;
+}
+
+.texts-container > p {
+  font-size: clamp(18px, 5vw, 24px);
+  text-align: justify;
+}
+
+.button-container {
+  width: 100%;
+}
+
+.button-container > button {
+  width: 270px;
+  height: 60px;
+  background-color: #f3d2ff;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 30px;
+  padding: 0 20px 0 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 1s;
+  color: #16161d;
+}
+
+button > img {
+  width: 18px;
+  margin-left: 15px;
+}
+
+.video-presentation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  background-image: url("../assets/background/gradient.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-presentation.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.video-presentation video {
+  position: relative;
+  width: 80%;
+  outline: none;
+  border-radius: 10px;
+}
+
+.close {
+  width: 50px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.soleil {
+  visibility: hidden;
+}
+
+.soleil {
+  visibility: visible;
+  width: 300px;
+  position: absolute;
+  bottom: 15px;
+  right: 250px;
+  animation: sunturning 10s linear 0s infinite;
+
+  /* VOIR POUR LES WIDTH QUI SE FONT TOUT SEUL */
+}
+@keyframes sunturning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.presentation {
+  width: 100%;
+  border-radius: 10px;
+  background-image: url("../assets/background/gradient.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: scroll;
+  margin-top: 50px;
+}
+
+.themes {
+  height: 350px;
+  display: flex;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+.card {
+  width: 270px;
+  height: 270px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.1));
+  display: block;
+  margin-left: 20px;
+}
+
+.themes-img {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themes-img > img {
+  width: auto;
+  height: 90px;
+}
+
+.themes-texts {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.themes-texts > p {
+  padding-top: 15px;
+  font-size: 18px;
+  width: 80%;
+}
+
+footer {
+  width: 100%;
+  height: 15%;
+  padding: 0 20px 0 20px;
+}
+
+.yo {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.yo > img {
+  height: 15px;
+}
+
+.mail {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.mail > a {
+  color: #16161d;
+  outline: none;
+  /* text-decoration: none; */
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.video-container {
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 550px) {
+  .texts-container {
+    width: 500px;
+  }
+
+  .presentation {
+    border-radius: 20px;
+  }
+
+  .themes {
+    margin-right: 0px;
+  }
+
+  footer {
+    display: flex;
+  }
+
+  .yo {
+    width: 50%;
+    height: 100%;
+  }
+
+  .yo > img {
+    height: 30px;
+  }
+
+  .mail {
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .mail > a {
+    font-size: 32px;
+    /* use clamp */
+  }
+}
+@media only screen and (min-width: 670px) {
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-200%);
+    }
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  .logo {
+    padding: 0 50px 0 50px;
+  }
+
+  .main {
+    padding: 0 50px 0 50px;
+  }
+
+  button:hover {
+    width: 500px;
+    background-color: #ffcb9b;
+  }
+
+  .themes {
+    width: 100%;
+    margin-top: 100px;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 200px 0;
+    visibility: visible;
+  }
+
+  .video-container > video {
+    width: 800px;
+    border-radius: 10px;
+  }
+
+  footer {
+    padding: 0 50px 0 50px;
+  }
+}
+
+@media only screen and (min-width: 1850px) {
+  .soleil {
+    visibility: visible;
+    width: 400px;
+    position: absolute;
+    bottom: 15px;
+    right: 400px;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-250%);
+    }
+  }
+}
+
+/* .test {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: -100vw;
+  z-index: 100;
+  background-color: red;
+  animation: coucou 2s ease-in-out;
+}
+
+@keyframes coucou {
+  0% {
+    transform: translateY(0vw);
+  }
+  50% {
+    transform: translateY(-100vw);
+  }
+
+  100% {
+    transform: translateY(-500vw);
+  }
+} */

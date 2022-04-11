@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="assets/favicon/favLogo.svg" />
+    <script src="js/main.js" defer></script>
+    <title>TAZZ</title>
+  </head>
+  <body>
+    <div class="salut test"></div>
+
+    <header>
+      <div class="banner">
+        <h2 class="scrolling">
+          TAZZ LE MEDIA POSITIF - MUSIQUE - SOCIÉTÉ - CINEMA - ART
+        </h2>
+      </div>
+      <div class="logo">
+        <img src="assets/logo/logo.svg" alt="" />
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="main">
+        <div class="slogan-container">
+          <h1>PRENDS TA DOSE<br />DE CULTURE</h1>
+        </div>
+        <div class="content-container">
+          <div class="texts-container">
+            <p>
+              Tazz est le média qui aborde des thématiques culturelles variées
+              dans un environnement positif. Ce sont des mini-documentaires en
+              lien avec la société de nos jours qui s'adressent aux jeunes.
+            </p>
+          </div>
+          <div class="button-container">
+            <button onclick="toggle();" type="button">
+              Présentation du média
+              <img src="assets/img/arrow.svg" alt="" />
+            </button>
+          </div>
+          <div class="video-presentation">
+            <video controls>
+              <source src="assets/video/test.mp4" type="video/mp4" />
+              Dommage, tu peux pas lire la vidéo... Tu rates un truc poto.
+            </video>
+            <img
+              class="close"
+              src="assets/img/cross.svg"
+              onclick="toggle();"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="presentation">
+        <div class="themes">
+          <div class="music card">
+            <div class="themes-img">
+              <img src="assets/img/musique.svg" alt="" />
+            </div>
+            <div class="themes-texts">
+              <p>
+                Mise en lumière de 4 artistes indépendants et de leurs univers
+                musicaux à travers leurs projets en voie de concrétisation.
+              </p>
+            </div>
+          </div>
+          <div class="society card">
+            <div class="themes-img">
+              <img src="assets/img/societe.svg" alt="" />
+            </div>
+            <div class="themes-texts">
+              <p>
+                Immersion au coeur de la société française autour de thématiques
+                sociétales.
+              </p>
+            </div>
+          </div>
+          <div class="cinema card">
+            <div class="themes-img">
+              <img src="assets/img/cinema.svg" alt="" />
+            </div>
+            <div class="themes-texts">
+              <p>Mettre l'accent sur des métiers techniques du cinéma.</p>
+            </div>
+          </div>
+          <div class="art card">
+            <div class="themes-img">
+              <img src="assets/img/art.svg" alt="" />
+            </div>
+            <div class="themes-texts">
+              <p>Incursion dans l'art du XXIe siècle et son origine.</p>
+            </div>
+          </div>
+        </div>
+        <div class="video-container"></div>
+      </div>
+    </section>
+    <footer>
+      <div class="yo">
+        <img src="assets/logo/logo.svg" alt="" />
+      </div>
+      <div class="mail">
+        <a href="mailto:contact@tazz.media">contact@tazz.media</a>
+      </div>
+    </footer>
+  </body>
+</html>
